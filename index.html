@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doppelgänger App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a1a2f;
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(6px);
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 0;
+    }
+
+    .nav-logo img {
+      height: 120px;
+      width: auto;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('batman.gif') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 16px;
+      max-width: 800px;
+    }
+
+    .hero-overlay h1 {
+      font-size: 56px;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .hero-overlay p {
+      font-size: 20px;
+      color: #dddddd;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background-color: #1e90ff;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #0f70d1;
+    }
+
+    /* Feature Section */
+    .features {
+      padding: 100px 20px 60px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-items: center;
+      background-color: #0d243a;
+      position: relative;
+height: 100vh;
+      background: url('alternate.png') no-repeat center center/cover;
+    }
+.features img
+
+    {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      position: absolute;
+    }
+    .features h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .features p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 18px;
+      color: #bbbbbb;
+    }
+
+    /* Footer */
+    footer {
+      padding: 20px;
+      background-color: #081421;
+      text-align: center;
+      font-size: 14px;
+      color: #888;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-overlay h1 {
+        font-size: 36px;
+      }
+
+      .hero-overlay p {
+        font-size: 16px;
+      }
+
+      .cta-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar with Centered Logo -->
+  <nav>
+    <div class="nav-logo">
+      <img src="logo.png" alt="Doppelgänger Logo" />
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="hero-overlay">
+      <h1>Doppelgänger App</h1>
+      <p>Talk to your future self. Explore alternate realities. Rewrite endings.</p>
+      <button class="cta-button" onclick="navigateToApp()">Get Started</button>
+    </div>
+  </div>
+
+  <!-- Feature Section -->
+  <div id="features" class="features">
+    
+    <h2>Why Doppelgänger?</h2>
+    <p>Allows you to safely input your thoughts and feelings, exploring different outcomes and perspectives.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Doppelgänger. All rights reserved.
+  </footer>
+
+  <script>
+    function navigateToApp() {
+      window.location.href = "/app"; // Change to your actual route
+    }
+  </script>
+</body>
+</html>
